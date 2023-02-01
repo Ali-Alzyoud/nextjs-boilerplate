@@ -5,6 +5,7 @@
 .stories__header {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 .stories__title {
@@ -52,7 +53,7 @@
     z-index: -1;
     left: -4%;
     top: -4%;
-    background-image: conic-gradient(#00AEEF, #fff, #00AEEF, #fff, #00AEEF);
+    background-image: conic-gradient(#00AEEF, #fff, hsl(261, 47%, 58%), #fff, #00AEEF);
     animation: spin 5s linear infinite;
   }
   

@@ -1,54 +1,27 @@
 export default [
     {
         id: 123,
-        title: "مقياس الإكتئاب",
-        icon: "",
-        background: ""
+        title: "برنامج حياة ذات معنى",
+        count: "3",
+        background: "/programs/1.png",
     },
     {
         id: 467,
-        title: "مقياس الإكتئاب",
-        icon: "",
-        background: ""
+        title: "البرنامج العلاجي لإضطراب النهم العصي",
+        count: "7",
+        background: "/programs/2.png",
     },
     {
         id: 789,
-        title: "مقياس الإكتئاب",
-        icon: "",
-        background: ""
+        title: "البرنامج العلاجي للقلق الإجتماعي",
+        count: "2",
+        background: "/programs/3.png",
     },
     {
         id: 1011,
-        title: "مقياس الإكتئاب",
-        icon: "",
-        background: ""
+        title: "برنامج مهارات المرونة النفسية",
+        count: "10",
+        background: "/programs/4.png",
     },
 
-    {
-        id: 8080,
-        title: "مقياس الإكتئاب",
-        icon: "",
-        background: ""
-    },
-
-    {
-        id: 4060,
-        title: "مقياس الإكتئاب",
-        icon: "",
-        background: ""
-    },
-
-    {
-        id: 2090,
-        title: "مقياس الإكتئاب",
-        icon: "",
-        background: ""
-    },
-
-    {
-        id: 12312,
-        title: "مقياس الإكتئاب",
-        icon: "",
-        background: ""
-    },
 ]

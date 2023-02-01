@@ -26,7 +26,7 @@ const Measures = () => {
                   </svg>
                 </div>
               </header>
-              <h3 className={styles.measure__title}>{measure.title}</h3>
+              <h2 className={styles.measure__title}>{measure.title}</h2>
             </Link>
           </li>
         ))}
