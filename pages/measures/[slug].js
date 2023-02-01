@@ -15,7 +15,7 @@ function Meausre({measure}) {
 
     return (
         <>
-        <div className={styles.main}>
+        <div className={styles.main} style={{backgroundColor: `${measure.background}`}}>
             <div className='container'>
                 {/* <header>
                     <button className={styles.homeButton}>{'<'}</button>
@@ -38,7 +38,7 @@ function Meausre({measure}) {
                             تنويه: هذه الاختبارات ليست أداة تشخيص او اداة علاجية ولا تغنى عن جلسة الطبيب او العلاج النفسي.
                         </p>
 
-                        <button className={styles.measure__button}>البدأ الآن</button>
+                        <button className={styles.measure__button} style={{backgroundColor: `${measure.background}`}}>البدأ الآن</button>
                     </section>
 
                 </main>
