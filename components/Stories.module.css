@@ -1,0 +1,32 @@
+.stories {
+    margin-top: 48px;
+}
+
+.stories__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stories__title {
+    font-size: 20px;
+}
+
+.stories__items {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.story {
+    text-align: center;
+}
+
+.story__image {
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+
+.story__title {
+    font-size: 16px;
+    margin-top: 12px;
+}
