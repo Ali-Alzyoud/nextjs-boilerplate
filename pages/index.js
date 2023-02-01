@@ -9,15 +9,12 @@ import Programs from '@/components/Programs'
 
 export default function Home() {
   return (
-    <>
+    <div className='container'>
       <header>
         {/* Navbar */}
         <Navbar />
 
         {/* Stories */}
-        <div>
-
-        </div>
         <Stories />
       </header>
 
@@ -26,9 +23,8 @@ export default function Home() {
         <Measures />
 
         {/* Programs */}
-
         <Programs />
       </main>
-    </>
+    </div>
   )
 }

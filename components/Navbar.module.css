@@ -3,10 +3,16 @@
     padding-bottom: 16px;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 .navbar__links {
     list-style: none;
     display: flex;
-    gap: 12px;
+    gap: 24px;
+}
+
+.navIcon {
+    width: 24px;
+    height: 24px;
 }

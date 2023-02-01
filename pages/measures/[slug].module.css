@@ -1,3 +1,53 @@
-main {
-    background-color: red;
+.homeButton {
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 32px;
+}
+
+.main {
+    background-color: hsl(245, 92%, 60%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.meausre {
+    background-color: #FFF;
+    border-radius: 12px;
+    max-width: 512px;
+    margin: 0 auto;
+    padding: 36px 24px;
+    box-shadow: 0 5px 15px hsla(0, 0, 0, 0.2);
+}
+
+.measure__description {
+    margin-top: 16px;
+}
+
+.measure__message {
+    margin-top: 16px;
+}
+
+.measure__note {
+    margin-top: 64px;
+    color: hsl(210, 22%, 49%);
+    font-size: 14px;
+}
+
+.measure__button {
+    background-color: hsl(245, 92%, 60%);
+    border-color: hsl(245, 92%, 60%);
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    width: 100%;
+    color: #FFF;
+    cursor: pointer;
+    transition: 0.1s background-color ease-in-out;
+}
+
+.measure__button:hover {
+    background-color: hsl(245, 86%, 40%);
+
 }

@@ -13,20 +13,51 @@
 
 .stories__items {
     display: flex;
-    gap: 24px;
+    gap: 36px;
     margin-top: 24px;
+    overflow-y:scroll;
+    padding: 16px 4px;
 }
 
 .story {
     text-align: center;
+    max-width: 100px;
 }
 
 .story__image {
     border-radius: 50%;
-    border: 2px solid #333;
+    background-color: #fff;
+    border: 2px solid #fff;
 }
 
 .story__title {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 12px;
+    color: hsl(211, 39%, 23%);
 }
+
+.gradient {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.gradient:after {
+    display: block;
+    border-radius: 9999px;
+    content: '';
+    width: 108%;
+    height: 108%;
+    position: absolute;
+    z-index: -1;
+    left: -4%;
+    top: -4%;
+    background-image: conic-gradient(#00AEEF, #fff, #00AEEF, #fff, #00AEEF);
+    animation: spin 5s linear infinite;
+  }
+  
+  /* @keyframes spin { 
+    100% { 
+      transform: rotate(360deg);
+    }
+  } */

@@ -14,12 +14,13 @@ const Stories = () => {
       </header>
       <ul className={styles.stories__items}>
         {StoriesData.map(story => (
-          <li className={styles.story}>
-            <Image className={styles.story__image} src={story.image} alt={story.title} width={128} height={128} />
+          <li className={styles.story} key={story.id}>
+            <div className={styles.gradient}>
+              <Image className={styles.story__image} src={story.image} alt={story.title} width={100} height={100} />
+            </div>
             <h3 className={styles.story__title}>{story.title}</h3>
           </li>
         ))}
-        <li></li>
       </ul>
     </section>
   )
