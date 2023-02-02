@@ -5,6 +5,8 @@ import styles from './Navbar.module.css'
 
 const Navbar = () => {
   return (
+    <div className='container'>
+
     <nav className={styles.navbar}>
             <div className={styles.navbar__right}>
                 <Image src="/logo.svg" alt="logo" width={120} height={45} />
@@ -29,6 +31,7 @@ const Navbar = () => {
                 </ul>
             </div>
     </nav>
+    </div>
   )
 }
 

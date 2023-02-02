@@ -11,32 +11,36 @@ const Measures = ({modalHandle}) => {
   return (
     <div>
       <section className={styles.measures}>
-        <header className={styles.measures__header}>
-          <h2 className={styles.measures__title}>المقاييس النفسية</h2>
-        </header>
-        <ul className={styles.measures__items}>
-          {MeasuresData.map(measure => (
-            <li key={measure.id}>
-              <article
-               className={styles.measure} 
-               style={{backgroundColor: measure.background}}
-               onClick={() => modalHandle(measure.slug)}
-               >
-                <header className={styles.measure__header}>
-                  <div className={styles.measure__right}>
-                    {getIcon(measure.icon)}
-                  </div>
-                  <div className={styles.measure__left}>
-                    <svg id="i-chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                        <path d="M20 30 L8 16 20 2" />
-                    </svg>
-                  </div>
-                </header>
-                <h2 className={styles.measure__title}>{measure.title}</h2>
-              </article>
-            </li>
-          ))}
-        </ul>
+        <div className='container'>
+          <header className={styles.measures__header}>
+            <h2 className={styles.measures__title}>المقاييس النفسية</h2>
+          </header>
+        </div>
+        <div className='right-container'>
+          <ul className={styles.measures__items}>
+            {MeasuresData.map(measure => (
+              <li key={measure.id}>
+                <article
+                className={styles.measure} 
+                style={{backgroundColor: measure.background}}
+                onClick={() => modalHandle(measure.slug)}
+                >
+                  <header className={styles.measure__header}>
+                    <div className={styles.measure__right}>
+                      {getIcon(measure.icon)}
+                    </div>
+                    <div className={styles.measure__left}>
+                      <svg id="i-chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                          <path d="M20 30 L8 16 20 2" />
+                      </svg>
+                    </div>
+                  </header>
+                  <h2 className={styles.measure__title}>{measure.title}</h2>
+                </article>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </div>
   )

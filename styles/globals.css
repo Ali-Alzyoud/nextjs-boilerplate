@@ -49,15 +49,25 @@ ul {
   margin: 0 auto;
 }
 
+.right-container {
+  padding-right: 15%;
+}
+
 @media (max-width: 800px) {
   .container {
     width: 80%;
+  }
+  .right-container {
+    padding-right: 10%;
   }
 }
 
 @media (max-width: 640px) {
   .container {
     width: 90%;
+  }
+  .right-container {
+    padding-right: 5%;
   }
 }
 

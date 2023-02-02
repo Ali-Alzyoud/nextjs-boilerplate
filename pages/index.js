@@ -40,7 +40,6 @@ export default function Home() {
 
   return (
     <div className='full-width'>
-      <div className='container'>
         <header>
           {/* Navbar */}
           <Navbar />
@@ -62,7 +61,6 @@ export default function Home() {
               <Measure measure={modal.opendedMeasure} closeModal= {closeModal} />
             </AnimatePresence>
         )}
-      </div>
     </div>
 
   )

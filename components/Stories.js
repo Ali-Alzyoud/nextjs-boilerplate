@@ -7,11 +7,16 @@ import styles from './Stories.module.css'
 
 const Stories = () => {
   return (
+    
     <section className={styles.stories}>
-      <header className={styles.stories__header}>
-        <h2 className={styles.stories__title}>القصص المميزة</h2>
-        <p>عرض المزيد</p>
-      </header>
+      <div className='container'>
+        <header className={styles.stories__header}>
+          <h2 className={styles.stories__title}>القصص المميزة</h2>
+          <p>عرض المزيد</p>
+        </header>
+      </div>
+      <div className='right-container'>
+
       <ul className={styles.stories__items}>
         {StoriesData.map(story => (
           <li className={styles.story} key={story.id}>
@@ -22,6 +27,7 @@ const Stories = () => {
           </li>
         ))}
       </ul>
+      </div>
     </section>
   )
 }
