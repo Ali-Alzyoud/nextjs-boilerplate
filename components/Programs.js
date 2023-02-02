@@ -3,27 +3,31 @@ import React from 'react'
 import Image from 'next/image'
 
 import PropgramsData from '../data/programs'
+import {programsInl, programsMessionInl, moreInl} from '../data/fixedData'
 import styles from './Programs.module.css'
 
-const Programs = () => {
+const Programs = ({inl}) => {
+  const {locale} = inl
   return (
     <section className={styles.programs}>
       <div className='container'>
         <header className={styles.programs__header}>
-          <h2 className={styles.programs__title}>البرامج العلاجية</h2>
-          <p>عرض المزيد</p>
+          <h2 className={styles.programs__title}>{programsInl[locale]}</h2>
+          <p>{moreInl[locale]}</p>
         </header>
       </div>
       <div className='right-container'>
 
         <ul className={styles.programs__items}>
-          {PropgramsData.map(program => (
+          {PropgramsData
+          .filter(program => program.locale === locale)
+          .map(program => (
             <li key={program.id}>
               <div className={styles.program} style={{backgroundImage: `url(${program.background})`}}>
                 <div className={styles.program__overlay}></div>
                 <div className={styles.program__info}>
                   <h2 className={styles.program__title}>{program.title}</h2>
-                  <p className={styles.program__count}>{program.count} مراحل</p>
+                  <p className={styles.program__count}>{program.count} {programsMessionInl[locale]}</p>
                 </div>
               </div>
             </li>

@@ -1,9 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import styles from './Navbar.module.css'
 
-const Navbar = () => {
+const Navbar = ({inl}) => {
+    const {locales} = inl
   return (
     <div className='container'>
 
@@ -15,7 +17,7 @@ const Navbar = () => {
                 <ul className={styles.navbar__links}>
                     <li className={styles.navbar__link}>
                         <div className={styles.navIcon}>
-                            <svg id="i-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <svg id="i-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
                                 <circle cx="14" cy="14" r="12" />
                                 <path d="M23 23 L30 30"  />
                             </svg>
@@ -23,11 +25,21 @@ const Navbar = () => {
                     </li>
                     <li className={styles.navbar__link}>
                         <div className={styles.navIcon}>
-                            <svg id="i-bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <svg id="i-bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
                                 <path d="M8 17 C8 12 9 6 16 6 23 6 24 12 24 17 24 22 27 25 27 25 L5 25 C5 25 8 22 8 17 Z M20 25 C20 25 20 29 16 29 12 29 12 25 12 25 M16 3 L16 6" />
                             </svg>
                         </div>
                     </li>
+
+                    {locales.map(locale => (
+                    <li className={`${styles.navbar__link} ${styles.inl}`} key={locale}>
+                        <div className={styles.navIcon}>
+                                <Link href={locale} locale={locale}>
+                                    {locale}
+                                </Link>
+                        </div>
+                    </li>
+                    ))}
                 </ul>
             </div>
     </nav>

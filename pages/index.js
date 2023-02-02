@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react'
+import { useRouter } from 'next/router'
 
-import Head from 'next/head'
-import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 
 import Navbar from '../components/Navbar'
@@ -15,7 +14,7 @@ import MeasuresData from '../data/measures'
 import { AnimatePresence, motion } from 'framer-motion'
 
 export default function Home() {
-
+  const inl = useRouter()
   const [modal, setModal] = useState(() => ({open: false, opendedMeasure: null}))
 
   const modalHandle = (slug) => {
@@ -31,6 +30,20 @@ export default function Home() {
   }
 
   useEffect(() => {
+    const flag = inl['locale'] === 'ar-AR' || ''
+    document.body.style.direction = flag? 'rtl': 'ltr'
+    const container = document.querySelector('.right-container') || document.querySelector('.left-container')
+
+    if(container.classList.contains('right-container') && !flag) {
+      container.classList.add('left-container')
+      container.classList.remove('right-container')
+    } else if(container.classList.contains('left-container') && flag) {
+      container.classList.remove('left-container')
+      container.classList.add('right-container')
+    }
+  })
+
+  useEffect(() => {
     if(modal.open) {
       document.body.style.overflow = 'hidden'
     } else {
@@ -42,23 +55,23 @@ export default function Home() {
     <div className='full-width'>
         <header>
           {/* Navbar */}
-          <Navbar />
+          <Navbar inl={inl} />
 
           {/* Stories */}
-          <Stories />
+          <Stories inl={inl} />
         </header>
 
         <main className={styles.main}>
           {/* Measures */}
-          <Measures modalHandle={modalHandle} />
+          <Measures inl={inl} modalHandle={modalHandle} />
 
           {/* Programs */}
-          <Programs />
+          <Programs inl={inl} />
         </main>
 
         {modal.open && (
           <AnimatePresence>
-              <Measure measure={modal.opendedMeasure} closeModal= {closeModal} />
+              <Measure inl={inl} measure={modal.opendedMeasure} closeModal= {closeModal} />
             </AnimatePresence>
         )}
     </div>

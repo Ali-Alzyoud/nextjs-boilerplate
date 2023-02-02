@@ -1,17 +1,21 @@
 import {useRef, useState, useEffect} from 'react'
 
-import questions from '../data/questions'
+import questionsData from '../data/questions'
 import styles from './Measure.module.css'
+import {measureMessageInl, measureNoteInl, measureStartButtonInl, resultTitleInl, resultMessageInl} from '../data/fixedData'
 
 import { AnimatePresence, motion } from 'framer-motion'
 import Questions from '@/components/Questions'
 
-function Meausre({measure, closeModal}) {
+function Meausre({measure, closeModal, inl}) {
     const [questionsStart, setQuestionsStart] = useState(false);
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showingResult, setShowingResult] = useState(false);
     const collectedData = useRef({});
     // derived states
+    const {locale} = inl
+    let questions = questionsData
+    questions = questions.filter(question => question.locale === locale);
     const question = questions[currentQuestion];
 
     const handleAnswers = (e, selectedAnswer) => {
@@ -50,26 +54,26 @@ function Meausre({measure, closeModal}) {
                                 </p>
 
                                 <p className={styles.measure__message}>
-                                    في الأسئلة التالية نرجوا ان تخبرنا اي من الاعراض التي تتكرر لديك خلال الاسبوعيين الماضيين
+                                    {measureMessageInl[locale]}
                                 </p>
 
                                 <p className={styles.measure__note}>
-                                    تنويه: هذه الاختبارات ليست أداة تشخيص او اداة علاجية ولا تغنى عن جلسة الطبيب او العلاج النفسي.
+                                    {measureNoteInl[locale]}
                                 </p>
                                 <button 
                                     className={styles.measure__button} 
                                     style={{backgroundColor: `${measure.background}`}}
                                     onClick={() => setQuestionsStart(questionsStart => !questionsStart)}
                                     >
-                                        البدأ الآن
+                                        {measureStartButtonInl[locale]}
                                 </button>
                             </div>
                             ) : !showingResult? (
-                                <Questions handleAnswers={handleAnswers} question={question} measure={measure} />
+                                <Questions inl={inl} handleAnswers={handleAnswers} question={question} measure={measure} />
                             ): (
                                 <div className={styles.result}>
-                                    <h2 className={styles.result__title}>نتيجة المقياس</h2>
-                                    <p className={styles.result__message}>صحتك النفسية تدعوا للإطمئنان وندعوك للأهتمام بزيادة الصحة النفسية من خلال النوم الصحي، وإضافة بعض المرح، والأكل الصحي، ولعب الرياضة.</p>
+                                    <h2 className={styles.result__title}>{resultTitleInl[locale]}</h2>
+                                    <p className={styles.result__message}>{resultMessageInl[locale]}</p>
                                 </div>
                             )}
                         </section>

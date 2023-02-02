@@ -2,23 +2,27 @@ import React, { useState } from 'react'
 
 import Measure from './Measure'
 import MeasuresData from '../data/measures'
+import {measuresInl} from '../data/fixedData'
 import styles from './Measures.module.css'
 
 import { getIcon } from '@/utils/utils'
 
-const Measures = ({modalHandle}) => {
+const Measures = ({modalHandle, inl}) => {
+  const {locale} = inl
 
   return (
     <div>
       <section className={styles.measures}>
         <div className='container'>
           <header className={styles.measures__header}>
-            <h2 className={styles.measures__title}>المقاييس النفسية</h2>
+            <h2 className={styles.measures__title}>{measuresInl[locale]}</h2>
           </header>
         </div>
         <div className='right-container'>
           <ul className={styles.measures__items}>
-            {MeasuresData.map(measure => (
+            {MeasuresData
+            .filter(measure => measure.locale === locale)
+            .map(measure => (
               <li key={measure.id}>
                 <article
                 className={styles.measure} 

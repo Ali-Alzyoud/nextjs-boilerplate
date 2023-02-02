@@ -1,5 +1,6 @@
 export default [
     {
+        locale: 'ar-AR',
         id: 123,
         title: "هل تحب اللعب والمرح؟",
         options: [
@@ -26,6 +27,7 @@ export default [
         ]
     },
     {
+        locale: 'ar-AR',
         id: 456,
         title: "هل تحب الحياة؟",
         options: [
@@ -47,6 +49,7 @@ export default [
         ]
     },
     {
+        locale: 'ar-AR',
         id: 12323,
         title: "هل تحب القراءة؟",
         options: [
@@ -63,6 +66,7 @@ export default [
         ]
     },
     {
+        locale: 'ar-AR',
         id: 121233,
         title: "هل تحب الغذاء؟",
         options: [
@@ -81,6 +85,117 @@ export default [
                 title: "أحب الغذاء قليلا",
                 value: 3,
             },
+        ]
+    },
+
+    /* en */
+
+    {
+        locale: 'en-US',
+        id: 345346456,
+        title: "Lorem Ipsum is simply dummy",
+        options: [
+            {
+                id:12,
+                title: "Lorem Ipsum is simply dummy text of the printing",
+                value: 1,
+            },
+            {
+                id:23,
+                title:  "Lorem Ipsum is simply dummy text of the printing",
+                value: 2,
+            },
+            {
+                id:34,
+                title: "Lorem Ipsum is simply dummy text of the printing",
+                value: 3,
+            },
+            {
+                id:56,
+                title: "Lorem Ipsum is simply dummy text of the printing",
+                value: 4,
+            }
+        ]
+    },
+    {
+        locale: 'en-US',
+        id: 455675676,
+        title: "Lorem Ipsum is simply dummy",
+        options: [
+            {
+                id:12,
+                title: "Lorem Ipsum is simply dummy text of the printing",
+                value: 1,
+            },
+            {
+                id:23,
+                title:  "Lorem Ipsum is simply dummy text of the printing",
+                value: 2,
+            },
+            {
+                id:34,
+                title: "Lorem Ipsum is simply dummy text of the printing",
+                value: 3,
+            },
+            {
+                id:56,
+                title: "Lorem Ipsum is simply dummy text of the printing",
+                value: 4,
+            }
+        ]
+    },
+    {
+        locale: 'en-US',
+        id: 12567345345323,
+        title: "Lorem Ipsum is simply dummy",
+        options: [
+            {
+                id:12,
+                title: "Lorem Ipsum is simply dummy text of the printing",
+                value: 1,
+            },
+            {
+                id:23,
+                title:  "Lorem Ipsum is simply dummy text of the printing",
+                value: 2,
+            },
+            {
+                id:34,
+                title: "Lorem Ipsum is simply dummy text of the printing",
+                value: 3,
+            },
+            {
+                id:56,
+                title: "Lorem Ipsum is simply dummy text of the printing",
+                value: 4,
+            }
+        ]
+    },
+    {
+        locale: 'en-US',
+        id: 121345345345233,
+        title: "Lorem Ipsum is simply dummy",
+        options: [
+            {
+                id:12,
+                title: "Lorem Ipsum is simply dummy text of the printing",
+                value: 1,
+            },
+            {
+                id:23,
+                title:  "Lorem Ipsum is simply dummy text of the printing",
+                value: 2,
+            },
+            {
+                id:34,
+                title: "Lorem Ipsum is simply dummy text of the printing",
+                value: 3,
+            },
+            {
+                id:56,
+                title: "Lorem Ipsum is simply dummy text of the printing",
+                value: 4,
+            }
         ]
     },
 ]

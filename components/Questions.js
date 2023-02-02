@@ -4,8 +4,9 @@ import styles from './Questions.module.css'
 import { AnimatePresence, motion } from 'framer-motion'
 
 
-const Questions = ({handleAnswers, question, measure}) => {
+const Questions = ({handleAnswers, question, measure, inl}) => {
   const [selectedAnswer, setSelectedAnswer] = useState('');
+  const {locale} = inl
 
   const selectAnswerHandle = (answer) => {
     setSelectedAnswer(answer)
@@ -29,7 +30,8 @@ const Questions = ({handleAnswers, question, measure}) => {
             {question.title}
         </h2>
         <div className={styles.answers}>
-            {question.options.map(option => (
+            {question.options
+            .map(option => (
                 <div key={option.id}>
                     <label 
                     htmlFor={option.id} 
