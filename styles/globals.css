@@ -56,3 +56,9 @@ ul {
     width: 90%;
   }
 }
+
+
+.activeAnswer {
+  border-color: hsl(245, 79%, 52%);
+  display: none;
+}

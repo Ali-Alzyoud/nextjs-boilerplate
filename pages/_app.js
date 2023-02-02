@@ -1,5 +1,6 @@
 import '@/styles/globals.css'
 import '@/styles/normalize.css'
+import '@/styles/slug.css'
 
 import { AnimatePresence } from 'framer-motion'
 
