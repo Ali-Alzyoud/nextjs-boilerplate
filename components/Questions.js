@@ -1,18 +1,26 @@
 import React, {useState} from 'react'
 
 import styles from './Questions.module.css'
+import { AnimatePresence, motion } from 'framer-motion'
+
 
 const Questions = ({handleAnswers, question, measure}) => {
   const [selectedAnswer, setSelectedAnswer] = useState('');
 
   const selectAnswerHandle = (answer) => {
-    // selectedAnswer.current = answer
     setSelectedAnswer(answer)
   }
 
 
   return (
     <div>
+        <motion.div
+            key="measure"
+            initial={{opacity: 0.5}} 
+            animate={{opacity: 1}} 
+            transition={{duration: 0.3}}
+            exit={{opacity: 0.5}}
+        > 
       <form className={styles.question} onSubmit={(e) => handleAnswers(e, selectedAnswer)}>
         <div className={styles.fixedTitle}>
             اي من الاعراض تكرر لديك خلال الاسبوعين الماضيين؟
@@ -52,6 +60,7 @@ const Questions = ({handleAnswers, question, measure}) => {
                 التالي
         </button>
       </form>
+      </motion.div>
     </div>
   )
 }

@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import Link from 'next/link'
+import Measure from './Measure'
 import MeasuresData from '../data/measures'
 import styles from './Measures.module.css'
 
 import { getIcon } from '@/utils/utils'
 
-const Measures = () => {
+const Measures = ({modalHandle}) => {
+
   return (
     <div>
       <section className={styles.measures}>
@@ -16,7 +17,11 @@ const Measures = () => {
         <ul className={styles.measures__items}>
           {MeasuresData.map(measure => (
             <li key={measure.id}>
-              <Link href={`/measures/${measure.slug}`} className={styles.measure} style={{backgroundColor: measure.background}}>
+              <article
+               className={styles.measure} 
+               style={{backgroundColor: measure.background}}
+               onClick={() => modalHandle(measure.slug)}
+               >
                 <header className={styles.measure__header}>
                   <div className={styles.measure__right}>
                     {getIcon(measure.icon)}
@@ -28,10 +33,9 @@ const Measures = () => {
                   </div>
                 </header>
                 <h2 className={styles.measure__title}>{measure.title}</h2>
-              </Link>
+              </article>
             </li>
           ))}
-          <li></li>
         </ul>
       </section>
     </div>

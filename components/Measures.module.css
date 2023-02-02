@@ -20,8 +20,8 @@
     border-radius: 12px;
     padding: 48px 32px;
     color: #FFF;
-    text-decoration: none;
     display: block;
+    cursor: pointer;
 }
 
 .measure__header {
