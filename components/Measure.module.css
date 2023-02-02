@@ -51,10 +51,10 @@
 .backButton {
     position: fixed;
     right: 30px;
-    bottom: 30px;
+    top: 30px;
     background-color: #FFF;
     border: #FFF;
-    padding: 16px;
+    padding: 14px;
     border-radius: 50%;
     box-shadow: 0 5px 15px hsla(0, 0, 0, 0.2);
     cursor: pointer;
