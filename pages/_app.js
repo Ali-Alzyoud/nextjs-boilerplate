@@ -1,6 +1,8 @@
 import '@/styles/globals.css'
 import '@/styles/normalize.css'
 
+import { AnimatePresence } from 'framer-motion'
+
 import Head from 'next/head'
 
 export default function App({ Component, pageProps }) {

@@ -55,3 +55,29 @@
     border-radius: 50%;
     box-shadow: 0 5px 15px hsla(0, 0, 0, 0.2);
 }
+
+/* answers form */
+
+.question__title {
+    margin-bottom: 32px;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.answer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border: 1.5px solid hsl(212, 33%, 89%);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.answer:hover {
+    background-color: hsl(210, 36%, 96%);
+}
