@@ -2,11 +2,14 @@ import '@/styles/globals.css'
 import '@/styles/normalize.css'
 import '@/styles/slug.css'
 
-import { AnimatePresence } from 'framer-motion'
-
+import { useRouter } from 'next/router'
 import Head from 'next/head'
 
+import { AnimatePresence } from 'framer-motion'
+
+
 export default function App({ Component, pageProps }) {
+  const router = useRouter()
   return (
     <>
       <Head>
@@ -17,7 +20,16 @@ export default function App({ Component, pageProps }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
       </Head>
-      <Component {...pageProps} />
+      <AnimatePresence 
+        // mode='wait'
+        // initial={false}
+        onExitComplete={() => {
+          window.scrollTo(0, 0)
+        }}
+
+      >
+        <Component {...pageProps} key={router.locale} />
+      </AnimatePresence>
     </>
   )
 }

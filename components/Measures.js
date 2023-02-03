@@ -34,7 +34,7 @@ const Measures = ({modalHandle, inl}) => {
                       {getIcon(measure.icon)}
                     </div>
                     <div className={styles.measure__left}>
-                      <svg id="i-chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <svg id="i-chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
                           <path d="M20 30 L8 16 20 2" />
                       </svg>
                     </div>

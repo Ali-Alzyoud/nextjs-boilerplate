@@ -11,7 +11,9 @@ import Programs from '@/components/Programs'
 
 import MeasuresData from '../data/measures'
 
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+
+
 
 export default function Home() {
   const inl = useRouter()
@@ -52,6 +54,11 @@ export default function Home() {
   }, [modal])
 
   return (
+    <motion.div
+        initial={{opacity: 0}} 
+        animate={{opacity: 1}} 
+        transition={{duration: 0.3}}
+    > 
     <div className='full-width'>
         <header>
           {/* Navbar */}
@@ -70,11 +77,12 @@ export default function Home() {
         </main>
 
         {modal.open && (
-          <AnimatePresence>
+          // <AnimatePresence>
               <Measure inl={inl} measure={modal.opendedMeasure} closeModal= {closeModal} />
-            </AnimatePresence>
+            // </AnimatePresence>
         )}
     </div>
+    </motion.div>
 
   )
 }

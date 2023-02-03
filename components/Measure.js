@@ -4,7 +4,7 @@ import questionsData from '../data/questions'
 import styles from './Measure.module.css'
 import {measureMessageInl, measureNoteInl, measureStartButtonInl, resultTitleInl, resultMessageInl} from '../data/fixedData'
 
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Questions from '@/components/Questions'
 
 function Meausre({measure, closeModal, inl}) {
@@ -37,7 +37,7 @@ function Meausre({measure, closeModal, inl}) {
             <div className={styles.modal} style={{backgroundColor: `${measure.background}`}}>
                 <div className='container'>
                     <motion.div
-                        key="measure"
+                        // key="measure"
                         initial={{opacity: 0.5, scale: 0.5}} 
                         animate={{opacity: 1, scale: 1}} 
                         transition={{duration: 0.3}}
@@ -81,7 +81,7 @@ function Meausre({measure, closeModal, inl}) {
                 </div>
             </div>
             <button className={styles.backButton} onClick={() => closeModal()}>
-                <svg id="i-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <svg id="i-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
                     <path d="M12 30 L24 16 12 2" />
                 </svg>
             </button>

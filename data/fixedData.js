@@ -48,3 +48,8 @@ export const resultMessageInl = {
    'en-US': 'Good'
 
 }
+
+export const language = {
+    'ar-AR': 'العربية',
+    'en-US': 'English'
+}

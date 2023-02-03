@@ -5,8 +5,11 @@ const nextConfig = {
     domains: ['images.pexels.com']
   },
   i18n: {
-    locales: ['en-US', 'ar-AR'],
+    locales: [ 'ar-AR', 'en-US'],
     defaultLocale: 'ar-AR',
-  }
+    localeDetection: false,
+  },
+  trailingSlash: true
 }
+
 module.exports = nextConfig

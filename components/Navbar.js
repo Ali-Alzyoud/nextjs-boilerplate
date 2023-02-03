@@ -3,9 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from './Navbar.module.css'
+import {language} from '../data/fixedData'
 
 const Navbar = ({inl}) => {
     const {locales} = inl
+
   return (
     <div className='container'>
 
@@ -31,13 +33,13 @@ const Navbar = ({inl}) => {
                         </div>
                     </li>
 
-                    {locales.map(locale => (
-                    <li className={`${styles.navbar__link} ${styles.inl}`} key={locale}>
-                        <div className={styles.navIcon}>
-                                <Link href={locale} locale={locale}>
-                                    {locale}
-                                </Link>
-                        </div>
+                    {locales
+                    .filter(locale => inl.locale != locale)
+                    .map(locale => (
+                    <li className={`${styles.navbar__link}`} key={locale}>
+                        <Link href={locale} locale={locale} className={styles.inl}>
+                            {language[locale]}
+                        </Link>
                     </li>
                     ))}
                 </ul>

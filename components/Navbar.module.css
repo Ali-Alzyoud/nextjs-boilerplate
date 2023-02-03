@@ -10,7 +10,12 @@
     list-style: none;
     display: flex;
     gap: 24px;
+    align-items: center;
 }
+
+.navbar__link {
+    cursor: pointer;
+} 
 
 .navIcon {
     width: 24px;
@@ -18,5 +23,12 @@
 }
 
 .inl {
-    word-wrap:normal;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: hsl(212, 33%, 89%);
+    overflow: hidden;
+    color: hsl(209, 61%, 16%);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
 }

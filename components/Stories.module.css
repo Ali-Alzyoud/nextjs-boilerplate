@@ -22,7 +22,7 @@
 
 .story {
     text-align: center;
-    max-width: 100px;
+    max-width: 70px;
 }
 
 .story__image {
@@ -39,8 +39,8 @@
 
 .gradient {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
 }
 
 .gradient:after {
@@ -53,9 +53,24 @@
     z-index: -1;
     left: -4%;
     top: -4%;
-    background-image: conic-gradient(#00AEEF, #fff, hsl(261, 47%, 58%), #fff, #00AEEF);
+    background-image: conic-gradient(
+    hsl(211, 27%, 70%), 
+    hsl(211, 27%, 70%), 
+    hsl(211, 27%, 70%),
+    hsl(211, 27%, 70%), 
+    hsl(211, 27%, 70%));
     animation: spin 5s linear infinite;
-  }
+}
+
+.active:after {
+    background-image: conic-gradient(
+        hsl(262, 43%, 51%), 
+    hsl(261, 47%, 58%), 
+    hsl(261, 47%, 58%),
+    hsl(261, 47%, 58%), 
+    hsl(262, 43%, 51%));
+    animation: spin 5s linear infinite;
+}
   
   /* @keyframes spin { 
     100% { 

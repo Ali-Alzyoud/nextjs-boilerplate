@@ -42,12 +42,12 @@ function Meausre({measure}) {
         
     }
     return (
-            <motion.div 
-                initial={{opacity: 0.7}} 
-                animate={{opacity: 1}} 
-                transition={{duration: 0.5}}
-                exit={{opacity: 0.7}}
-            >
+        <motion.div 
+        initial={{opacity: 0.5, scale: 0.5}} 
+        animate={{opacity: 1, scale: 1}} 
+        transition={{duration: 0.5}}
+        exit={{opacity: 0.5, scale: 0.5}}
+    >
             <div className={styles.main} style={{backgroundColor: `${measure.background}`}}>
                 <div className='container'>
                     <main>
