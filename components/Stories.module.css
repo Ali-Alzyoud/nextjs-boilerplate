@@ -22,7 +22,6 @@
 
 .story {
     text-align: center;
-    max-width: 70px;
     cursor: pointer;
 }
 
@@ -92,7 +91,25 @@
 @media (max-width: 642px) {
     /* mini Tablets */
     .stories__items {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .story:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    /* Phones */
+
+    .stories__items {
         grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+        margin-top: 16px;
+    }
+
+    .story:nth-last-child(2) {
+        display: none;
     }
     
 }
@@ -101,10 +118,59 @@
     /* Phones */
 
     .stories__items {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-        margin-top: 16px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .story:nth-last-child(2) {
+        display: none;
     }
     
+}
+
+@media (max-width: 420px) {
+    /* mini Phones */
+
+    .stories__items {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .story:nth-last-child(2) {
+        display: block !important;
+    }
+
+    .story__title {
+        display: none;
+    }
+
+    .story__image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .gradient {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 380px) { 
+    .stories__items {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .story:nth-last-child(3) {
+        display: none !important;
+    }
+}
+
+@media (max-width: 320px) {
+    /* mini Phones */
+
+    .stories__items {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .story:nth-last-child(4) {
+        display: none !important;
+    }
 }

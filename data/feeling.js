@@ -25,42 +25,42 @@ export default [
     },
     {
         locale: 'ar-AR',
-        id: 2091230,
+        id: 2091345345230,
         title: "القلق",
         emoji: "😨",
     },
 
     {
         locale: 'ar-AR',
-        id: 2091230,
+        id: 2091345230,
         title: "المرض",
         emoji: "🤮",
     },
 
     {
         locale: 'ar-AR',
-        id: 2091230,
+        id: 345345,
         title: "الضيق",
         emoji: "😫",
     },
 
     {
         locale: 'ar-AR',
-        id: 2091230,
+        id: 2091223430,
         title: "المرح",
         emoji: "😝",
     },
 
     {
         locale: 'ar-AR',
-        id: 2091230,
+        id: 2091278930,
         title: "مصدوم",
         emoji: "😱",
     },
 
     {
         locale: 'ar-AR',
-        id: 2091230,
+        id: 2091678230,
         title: "مرتاح",
         emoji: "🤗",
     },

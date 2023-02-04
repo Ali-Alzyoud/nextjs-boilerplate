@@ -2,14 +2,12 @@
     font-size: 14px;
 }
 
-
 .feelings__items {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 16px;
     margin-top: 16px;
 }
-
 
 .feeling {
     cursor: pointer;

@@ -29,7 +29,7 @@ export default [
     },
     {
         locale: 'ar-AR',
-        id: 8080,
+        id: 802380,
         title: "الخوف من الحقنة",
         image: "/doctors/6.jpg",
         active: false,
@@ -37,7 +37,7 @@ export default [
 
     {
         locale: 'ar-AR',
-        id: 4060,
+        id: 402360,
         title: "المرض الشديد",
         image: "/doctors/7.jpg",
         active: false,
@@ -45,11 +45,12 @@ export default [
 
     {
         locale: 'ar-AR',
-        id: 2090,
+        id: 2012390,
         title: "الخوف من الطبيب",
         image: "/doctors/8.jpg",
         active: false,
     },
+
 
     /* en */
 

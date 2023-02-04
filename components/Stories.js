@@ -4,7 +4,6 @@ import Image from 'next/image'
 
 import StoriesData from '../data/stories'
 import styles from './Stories.module.css'
-
 import {storiesInl, moreInl} from '../data/fixedData'
 
 const Stories = ({inl}) => {
