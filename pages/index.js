@@ -14,6 +14,7 @@ import Services from '@/components/Services'
 import MeasuresData from '../data/measures'
 import { motion } from 'framer-motion'
 import Business from '@/components/Business'
+import Gift from '@/components/Gift'
 
 
 export default function Home() {
@@ -69,17 +70,19 @@ export default function Home() {
         </header>
           <aside>
             <Feeling inl={inl} />
+
             <Services inl={inl} />
+
             <Business inl={inl} />
+
+            <Gift inl={inl} />
           </aside>
 
           <main className={styles.main}>
-            {/* Stories */}
             <Stories inl={inl} />
-            {/* Measures */}
+
             <Measures inl={inl} modalHandle={modalHandle} />
 
-            {/* Programs */}
             <Programs inl={inl} />
           </main>
 

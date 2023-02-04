@@ -87,7 +87,7 @@ export default [
         locale: 'ar-AR',
         id: 723423489,
         title: "مقياس المحبة",
-        icon: "gift",
+        icon: "activity",
         background: "hsl(158, 58%, 62%)",
         duration: '7 دقائق',
         slug: "مقياس-المحبة",

@@ -65,11 +65,11 @@
 
 .active:after {
     background-image: conic-gradient(
-    hsl(243, 94%, 66%), 
-    hsl(243, 94%, 66%), 
-    hsl(243, 94%, 66%),
-    hsl(243, 94%, 66%), 
-    hsl(243, 94%, 66%));
+    hsl(243, 94%, 70%), 
+    hsl(243, 94%, 70%), 
+    hsl(243, 94%, 70%),
+    hsl(243, 94%, 70%), 
+    hsl(243, 94%, 70%));
     animation: spin 5s linear infinite;
 }
   

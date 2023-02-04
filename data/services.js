@@ -19,7 +19,7 @@ export default [
         locale: 'en-US',
         id: 789,
         title: " Lorem Ipsum is simply dummy ",
-        icon: "gift",
+        icon: "activity",
         background: "hsl(158, 58%, 62%)",
         description: "It has survived not only five centuries"
     },
@@ -54,7 +54,7 @@ export default [
         locale: 'ar-AR',
         id: 723423489,
         title: "جلسة ثنائية",
-        icon: "gift",
+        icon: "activity",
         background: "hsl(158, 58%, 62%)",
         description: "جلسات نفسية وعاطفية وأسرية ثنائية (لشخصين) مع مختصين"
     },
