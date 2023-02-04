@@ -105,11 +105,4 @@ export default [
         image: "/doctors/7.jpg",
         active: false,
     },
-    {
-        locale: 'en-US',
-        id: 78783453459789,
-        title: "Lorem Ipsum",
-        image: "/doctors/8.jpg",
-        active: false,
-    },
 ]

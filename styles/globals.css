@@ -4,7 +4,7 @@
 
 * {
   margin: 0;
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Cairo', 'Roboto', sans-serif;
 }
 
 html, body {
@@ -14,7 +14,6 @@ html, body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  direction: rtl;
 }
 
 img, picture, video, canvas, svg {

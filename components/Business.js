@@ -15,10 +15,17 @@ const Business = ({inl}) => {
                     <circle cx="16" cy="16" r="4" />
                 </svg>
             </div>
-            <div className={styles.business__content}>
-                <h2 className={styles.business__title}>لبيه للأعمال</h2>
-                <p className={styles.business__description}>حزمة من خدمات الرفاهية النفسية المدعومة للموظفين.</p>
-            </div>
+            {locale === 'ar-AR'? (
+                <div className={styles.business__content}>
+                    <h2 className={styles.business__title}>لبيه للأعمال</h2>
+                    <p className={styles.business__description}>حزمة من خدمات الرفاهية النفسية المدعومة للموظفين.</p>
+                </div>
+            ) : (
+                <div className={styles.business__content}>
+                    <h2 className={styles.business__title}>Labya for Business</h2>
+                    <p className={styles.business__description}>Lorem Ipsum is simply dummy text of the printing.</p>
+                </div>
+            )}
             </div>
             <div className={styles.business__arrow}>
                 <svg id="i-chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">

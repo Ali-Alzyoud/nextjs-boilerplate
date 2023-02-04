@@ -33,19 +33,16 @@ export default function Home() {
 
   }
 
-  // useEffect(() => {
-  //   const flag = inl['locale'] === 'ar-AR' || ''
-  //   document.body.style.direction = flag? 'rtl': 'ltr'
-  //   const container = document.querySelector('.right-container') || document.querySelector('.left-container')
+  useEffect(() => {
+    const flag = inl['locale'] === 'ar-AR'
+    const html = document.querySelector('html')
+    if(flag) {
+      html.setAttribute('dir', 'rtl')
+    } else {
+      html.setAttribute('dir', 'ltr')
+    }
 
-  //   if(container.classList.contains('right-container') && !flag) {
-  //     container.classList.add('left-container')
-  //     container.classList.remove('right-container')
-  //   } else if(container.classList.contains('left-container') && flag) {
-  //     container.classList.remove('left-container')
-  //     container.classList.add('right-container')
-  //   }
-  // })
+  })
 
   useEffect(() => {
     if(modal.open) {

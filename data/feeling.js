@@ -77,7 +77,7 @@ export default [
     {
         locale: 'en-US',
         id: 4623453457,
-        title: "Lorem Ipsum",
+        title: "Ipsum",
         emoji: "😝",
     },
     {
