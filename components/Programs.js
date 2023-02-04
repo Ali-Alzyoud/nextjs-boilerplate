@@ -12,7 +12,7 @@ const Programs = ({inl}) => {
     <section className={styles.programs}>
         <header className={styles.programs__header}>
           <h2 className={styles.programs__title}>{programsInl[locale]}</h2>
-          <p>{moreInl[locale]}</p>
+          <p className={styles.seeMore}>{moreInl[locale]}</p>
         </header>
 
         <ul className={styles.programs__items}>

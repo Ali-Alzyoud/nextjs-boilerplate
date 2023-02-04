@@ -10,19 +10,20 @@
 
 .seeMore {
     font-size: 12px;
+    cursor: pointer;
 }
 
 .stories__items {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 24px;
-    margin-top: 24px;
-    padding: 16px 4px;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+    margin-top: 16px;
 }
 
 .story {
     text-align: center;
     max-width: 70px;
+    cursor: pointer;
 }
 
 .story__image {
@@ -32,7 +33,7 @@
 }
 
 .story__title {
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 12px;
     color: hsl(211, 39%, 23%);
 }
@@ -64,11 +65,11 @@
 
 .active:after {
     background-image: conic-gradient(
-        hsl(262, 43%, 51%), 
-    hsl(261, 47%, 58%), 
-    hsl(261, 47%, 58%),
-    hsl(261, 47%, 58%), 
-    hsl(262, 43%, 51%));
+    hsl(243, 94%, 66%), 
+    hsl(243, 94%, 66%), 
+    hsl(243, 94%, 66%),
+    hsl(243, 94%, 66%), 
+    hsl(243, 94%, 66%));
     animation: spin 5s linear infinite;
 }
   

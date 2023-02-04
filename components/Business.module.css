@@ -1,0 +1,41 @@
+.business {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    background-color: hsl(238, 100%, 88%);
+    border-radius: 8px;
+    padding: 16px;
+    color: hsl(245, 100%, 27%);
+}
+
+.business__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.business__icon {
+    width: 32px;
+    height: 32px;
+    color: hsl(245, 100%, 27%);
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    background-color: #FFF;
+}
+
+.business__title {
+    font-size: 16px;
+}
+
+.business__description {
+    font-size: 12px;
+}
+
+.business__arrow {
+    width: 12px;
+    height: 12px;
+}

@@ -37,6 +37,7 @@ const Measures = ({modalHandle, inl}) => {
                     </div>
                   </header>
                   <h2 className={styles.measure__title}>{measure.title}</h2>
+                  <p className={styles.measure__duration}>{measure.duration}</p>
                 </article>
               </li>
             ))}

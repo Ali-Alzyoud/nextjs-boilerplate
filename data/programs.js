@@ -42,13 +42,6 @@ export default [
         count: "7",
         background: "/programs/2.png",
     },
-    {
-        locale: 'ar-AR',
-        id: 784569,
-        title: "البرنامج العلاجي للقلق الإجتماعي",
-        count: "2",
-        background: "/programs/3.png",
-    },
 
     /* en */
 
@@ -87,6 +80,14 @@ export default [
         title: "Lorem Ipsum is simply dummy text of the printing",
         count: "2",
         background: "/programs/3.png",
+    },
+
+    {
+        locale: 'en-US',
+        id: 234234678340,
+        title: "Lorem Ipsum is simply dummy text of the printing",
+        count: "5",
+        background: "/programs/4.png",
     },
 
 ]
