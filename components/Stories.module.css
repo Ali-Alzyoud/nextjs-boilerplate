@@ -23,6 +23,9 @@
 .story {
     text-align: center;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .story__image {
