@@ -3,7 +3,7 @@ export default [
         locale: 'ar-AR',
         id: 123,
         title: "الضيف الثقيل",
-        image: "/doctors/1.jpg",
+        image: "/doctors/4.jpg",
         active: true,
     },
     {
@@ -78,7 +78,7 @@ export default [
         locale: 'en-US',
         id: 10123456711,
         title: "Lorem Ipsum",
-        image: "/doctors/1.jpg",
+        image: "/doctors/4.jpg",
         active: false,
     },
 

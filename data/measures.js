@@ -14,7 +14,7 @@ export default [
         id: 467,
         title: " Lorem Ipsum is simply dummy ",
         icon: "camera",
-        background: "hsl(44, 92%, 63%)",
+        background: "hsl(42, 63%, 48%)",
         duration: '3 minutes',
         slug: "three-f",
         description: " It has survived not only five centuries, but also the leap into electronic "

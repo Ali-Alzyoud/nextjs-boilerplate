@@ -78,3 +78,33 @@
       transform: rotate(360deg);
     }
   } */
+
+@media (max-width: 1500px) {
+    /* Laptop */
+    
+}
+
+@media (max-width: 1100px) {
+    /* large Tablets */
+    
+}
+
+@media (max-width: 642px) {
+    /* mini Tablets */
+    .stories__items {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+}
+
+@media (max-width: 550px) {
+    /* Phones */
+
+    .stories__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 16px;
+    }
+    
+}

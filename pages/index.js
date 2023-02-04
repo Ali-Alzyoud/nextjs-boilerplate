@@ -68,24 +68,20 @@ export default function Home() {
           {/* Navbar */}
           <Navbar inl={inl} />
         </header>
-          <aside>
-            <Feeling inl={inl} />
 
-            <Services inl={inl} />
-
-            <Business inl={inl} />
-
-            <Gift inl={inl} />
-          </aside>
-
-          <main className={styles.main}>
-            <Stories inl={inl} />
-
-            <Measures inl={inl} modalHandle={modalHandle} />
-
-            <Programs inl={inl} />
-          </main>
-
+        <main className={styles.main}>
+          <Stories inl={inl} />
+          <Measures inl={inl} modalHandle={modalHandle} />
+          <Programs inl={inl} />
+        </main>
+        
+        <aside className={styles.aside}>
+          <Feeling inl={inl} />
+          <Services inl={inl} />
+          <Business inl={inl} />
+          <Gift inl={inl} />
+        </aside>
+        
 
         {modal.open && (
           <Measure inl={inl} measure={modal.opendedMeasure} closeModal= {closeModal} />

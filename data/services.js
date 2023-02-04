@@ -12,7 +12,7 @@ export default [
         id: 467,
         title: " Lorem Ipsum is simply dummy ",
         icon: "camera",
-        background: "hsl(44, 92%, 63%)",
+        background: "hsl(42, 63%, 48%)",
         description: "It has survived not only five centuries"
     },
     {
@@ -47,7 +47,7 @@ export default [
         id: 46346347,
         title: "جلسة فورية",
         icon: "camera",
-        background: "hsl(44, 92%, 63%)",
+        background: "hsl(42, 63%, 48%)",
         description: "جلسات فورية للحالات الطارئة خلال 60 دقيقة"
     },
     {
