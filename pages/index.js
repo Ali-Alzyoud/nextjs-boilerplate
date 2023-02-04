@@ -3,16 +3,16 @@ import { useRouter } from 'next/router'
 
 import styles from '@/styles/Home.module.css'
 
-import Navbar from '../components/Navbar'
-import Stories from '../components/Stories'
+import Navbar from '@/components/Navbar'
+import Stories from '@/components/Stories'
 import Measures from '@/components/Measures'
 import Measure from '@/components/Measure'
 import Programs from '@/components/Programs'
+import Feeling from '@/components/Feeling'
+import Services from '@/components/Services'
 
 import MeasuresData from '../data/measures'
-
 import { motion } from 'framer-motion'
-
 
 
 export default function Home() {
@@ -31,19 +31,19 @@ export default function Home() {
 
   }
 
-  useEffect(() => {
-    const flag = inl['locale'] === 'ar-AR' || ''
-    document.body.style.direction = flag? 'rtl': 'ltr'
-    const container = document.querySelector('.right-container') || document.querySelector('.left-container')
+  // useEffect(() => {
+  //   const flag = inl['locale'] === 'ar-AR' || ''
+  //   document.body.style.direction = flag? 'rtl': 'ltr'
+  //   const container = document.querySelector('.right-container') || document.querySelector('.left-container')
 
-    if(container.classList.contains('right-container') && !flag) {
-      container.classList.add('left-container')
-      container.classList.remove('right-container')
-    } else if(container.classList.contains('left-container') && flag) {
-      container.classList.remove('left-container')
-      container.classList.add('right-container')
-    }
-  })
+  //   if(container.classList.contains('right-container') && !flag) {
+  //     container.classList.add('left-container')
+  //     container.classList.remove('right-container')
+  //   } else if(container.classList.contains('left-container') && flag) {
+  //     container.classList.remove('left-container')
+  //     container.classList.add('right-container')
+  //   }
+  // })
 
   useEffect(() => {
     if(modal.open) {
@@ -54,35 +54,40 @@ export default function Home() {
   }, [modal])
 
   return (
+    <div className='container'>
     <motion.div
         initial={{opacity: 0}} 
         animate={{opacity: 1}} 
         transition={{duration: 0.3}}
     > 
-    <div className='full-width'>
-        <header>
+
+    <div className={styles.grid}>
+        <header className={styles.header}>
           {/* Navbar */}
           <Navbar inl={inl} />
-
-          {/* Stories */}
-          <Stories inl={inl} />
         </header>
+          <aside>
+            <Feeling inl={inl} />
+            <Services inl={inl} />
+          </aside>
 
-        <main className={styles.main}>
-          {/* Measures */}
-          <Measures inl={inl} modalHandle={modalHandle} />
+          <main className={styles.main}>
+            {/* Stories */}
+            <Stories inl={inl} />
+            {/* Measures */}
+            <Measures inl={inl} modalHandle={modalHandle} />
 
-          {/* Programs */}
-          <Programs inl={inl} />
-        </main>
+            {/* Programs */}
+            <Programs inl={inl} />
+          </main>
+
 
         {modal.open && (
-          // <AnimatePresence>
-              <Measure inl={inl} measure={modal.opendedMeasure} closeModal= {closeModal} />
-            // </AnimatePresence>
-        )}
+          <Measure inl={inl} measure={modal.opendedMeasure} closeModal= {closeModal} />
+          )}
     </div>
     </motion.div>
+  </div>
 
   )
 }

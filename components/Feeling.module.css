@@ -1,0 +1,42 @@
+.feelings__title {
+    font-size: 14px;
+}
+
+
+.feelings__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+}
+
+
+.feeling {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feeling__title {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.feeling__emoji {
+    background-color: hsl(48, 100%, 88%);
+    padding: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.feeling__emoji:hover {
+    background-color: hsl(48, 95%, 76%);
+}

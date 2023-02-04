@@ -9,7 +9,6 @@ const Navbar = ({inl}) => {
     const {locales} = inl
 
   return (
-    <div className='container'>
 
     <nav className={styles.navbar}>
             <div className={styles.navbar__right}>
@@ -45,7 +44,6 @@ const Navbar = ({inl}) => {
                 </ul>
             </div>
     </nav>
-    </div>
   )
 }
 

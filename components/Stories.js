@@ -11,11 +11,10 @@ const Stories = ({inl}) => {
   const {locale} = inl
   return (
     
-    <div className='container'>
       <section className={styles.stories}>
           <header className={styles.stories__header}>
             <h2 className={styles.stories__title}>{storiesInl[locale]}</h2>
-            <p>{moreInl[locale]}</p>
+            <p className={styles.seeMore}>{moreInl[locale]}</p>
           </header>
 
         <ul className={styles.stories__items}>
@@ -32,7 +31,6 @@ const Stories = ({inl}) => {
         </ul>
 
       </section>
-      </div>
   )
 }
 

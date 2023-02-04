@@ -1,0 +1,49 @@
+.services {
+    margin-top: 48px;
+}
+
+.services__title {
+    font-size: 14px;
+}
+
+.services__items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px 4px;
+}
+
+.service {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service__left {
+    display: flex;
+    gap: 12px;
+}
+
+.service__icon {
+    width: 32px;
+    height: 32px;
+    color: #FFF;
+    padding: 6px;
+    font-weight: bold;
+    border-radius: 8px;
+    display: flex;
+}
+
+.service__title {
+    font-size: 16px;
+}
+
+.service__description {
+    font-size: 12px;
+}
+
+.service__arrow {
+    width: 12px;
+    height: 12px;
+}

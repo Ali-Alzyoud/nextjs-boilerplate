@@ -13,12 +13,9 @@ const Measures = ({modalHandle, inl}) => {
   return (
     <div>
       <section className={styles.measures}>
-        <div className='container'>
           <header className={styles.measures__header}>
             <h2 className={styles.measures__title}>{measuresInl[locale]}</h2>
           </header>
-        </div>
-        <div className='right-container'>
           <ul className={styles.measures__items}>
             {MeasuresData
             .filter(measure => measure.locale === locale)
@@ -44,7 +41,6 @@ const Measures = ({modalHandle, inl}) => {
               </li>
             ))}
           </ul>
-        </div>
       </section>
     </div>
   )

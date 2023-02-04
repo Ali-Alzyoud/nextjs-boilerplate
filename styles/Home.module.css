@@ -1,4 +1,12 @@
-.stories {
-    margin-top: 48px;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 64px;
 }
+
+.header {
+    grid-column: 1 / -1;
+}
+
+
 

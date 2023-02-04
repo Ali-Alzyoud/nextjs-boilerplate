@@ -8,6 +8,16 @@ export const measuresInl = {
     'ar-AR': 'المقاييس النفسية'
 }
 
+export const feelingInl = {
+    'en-US': 'What do you feel today?',
+    'ar-AR': 'كيف تشعر اليوم؟'
+}
+
+export const servicesInl = {
+    'en-US': 'Services',
+    'ar-AR': 'الخدمات'
+}
+
 export const programsInl = {
     'en-US': 'Therapeutic Programmers',
     'ar-AR': 'البرامج العلاجية'

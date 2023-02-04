@@ -27,7 +27,7 @@ export default [
         image: "/doctors/3.jpg",
         active: false,
     },
-
+/*
     {
         locale: 'ar-AR',
         id: 8080,
@@ -90,7 +90,7 @@ export default [
         title: "المرض الشديد",
         image: "/doctors/1.jpeg",
         active: false,
-    },
+    },*/
 
     {
         locale: 'ar-AR',

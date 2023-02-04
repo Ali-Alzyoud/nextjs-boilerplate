@@ -10,13 +10,10 @@ const Programs = ({inl}) => {
   const {locale} = inl
   return (
     <section className={styles.programs}>
-      <div className='container'>
         <header className={styles.programs__header}>
           <h2 className={styles.programs__title}>{programsInl[locale]}</h2>
           <p>{moreInl[locale]}</p>
         </header>
-      </div>
-      <div className='right-container'>
 
         <ul className={styles.programs__items}>
           {PropgramsData
@@ -33,7 +30,6 @@ const Programs = ({inl}) => {
             </li>
           ))}
         </ul>
-      </div>
     </section>
   )
 }

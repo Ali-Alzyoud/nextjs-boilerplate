@@ -45,7 +45,7 @@ ul {
 }
 
 .container {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -81,10 +81,4 @@ ul {
   .left-container {
     padding-left: 5%;
   }
-}
-
-
-.activeAnswer {
-  border-color: hsl(245, 79%, 52%);
-  display: none;
 }
