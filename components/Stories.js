@@ -29,7 +29,7 @@ const Stories = ({inl, doctorsData}) => {
 
         <ul className={styles.stories__items}>
           {doctors.map(doctor => (
-            <li key={doctor.Id}>
+            <li className={styles.stories__element} key={doctor.Id}>
               <Link className={styles.story} href={`/doctors/${doctor.UserName}`}>
                 <div className={`${styles.gradient} ${!doctor.active? styles.active : ''}`}>
                   <Image 
