@@ -145,8 +145,4 @@
     .stories__items {
         grid-template-columns: repeat(4, 1fr);
     }
-
-    .story:last-child{
-        display: none !important;
-    }
 }
