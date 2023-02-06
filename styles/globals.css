@@ -79,3 +79,13 @@ ul {
 .dark h6 {
   color: hsl(210, 36%, 96%);
 }
+
+.story__image--dark {
+  border-color: hsl(211, 39%, 23%) !important;
+  background-color: hsl(211, 39%, 23%) !important;
+}
+
+.feeling__emogi--dark {
+  background-color: hsl(209, 34%, 30%) !important;
+}
+

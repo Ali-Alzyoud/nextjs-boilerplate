@@ -19,7 +19,7 @@ const Feeling = ({inl}) => {
           .filter(feeling => feeling.locale === locale)
           .map(feeling => (
             <li className={styles.feeling} key={feeling.id}>
-              <div className={styles.feeling__emoji}>
+              <div className={`${styles.feeling__emoji} feeling__emogi--dark`}>
                 {feeling.emoji}
               </div>
               <h3 className={styles.feeling__title}>{feeling.title}</h3>

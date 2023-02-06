@@ -33,7 +33,7 @@ const Stories = ({inl, doctorsData}) => {
               <Link className={styles.story} href={`/doctors/${doctor.UserName}`}>
                 <div className={`${styles.gradient} ${!doctor.active? styles.active : ''}`}>
                   <Image 
-                    className={styles.story__image} 
+                    className={`${styles.story__image} story__image--dark`}
                     src={getProfileImage(doctor.ProfilePicThumbnail)} 
                     alt={``} width={70} height={70}
                      />
