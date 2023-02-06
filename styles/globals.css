@@ -107,8 +107,21 @@ ul {
   border-color: hsl(209, 61%, 16%);
 }
 
-.dark .measure--dark h2, 
-.dark .measure--dark p,
-.dark label {
-  color: hsl(209, 61%, 16%);
+.dark .measure--dark {
+  background-color: hsl(209, 61%, 16%) !important;;
+}
+
+
+.dark .measure__refrence--dark {
+  background-color: hsl(209, 34%, 30%) !important;
+  color: hsl(210, 36%, 96%) !important;
+}
+
+.dark .backButton--dark {
+  background-color: hsl(209, 34%, 30%) !important;
+  color: hsl(210, 36%, 96%) !important;
+}
+
+.dark .answer--dark:hover {
+  background-color: transparent;
 }

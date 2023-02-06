@@ -75,7 +75,7 @@ function Meausre({measure, closeModal, inl}) {
                                     {measureNoteInl[locale]}
                                 </p>
 
-                                <p className={styles.measure__refrence}>
+                                <p className={`${styles.measure__refrence} measure__refrence--dark`}>
                                     المرجع: إعداد الأطباء روبرت إل سبيتزر، جانيت بي دبليو وليامز، آيرت آرونك والزملاء، بمنحة تعليمية من شرآة.
                                 </p>
                                 <button 
@@ -106,7 +106,7 @@ function Meausre({measure, closeModal, inl}) {
                     </motion.div>
                 </div>
             </div>
-            <button className={styles.backButton} onClick={() => closeModal()}>
+            <button className={`${styles.backButton} backButton--dark`} onClick={() => closeModal()}>
                 <svg id="i-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
                     <path d="M12 30 L24 16 12 2" />
                 </svg>

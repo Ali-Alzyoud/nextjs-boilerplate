@@ -42,7 +42,7 @@ const Questions = ({handleAnswers, question, measure, inl, progress}) => {
                     <label 
                     htmlFor={option.id} 
                     className={`${styles.answer} 
-                    ${(selectedAnswer === option.id)? styles.activeAnswer: ''}`}
+                    ${(selectedAnswer === option.id)? styles.activeAnswer: ''} answer--dark`}
                     style={{borderColor: `${(selectedAnswer === option.id) ? measure.background: ''}`}}
                     >
                         {option.title}
