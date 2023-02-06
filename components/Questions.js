@@ -15,6 +15,12 @@ const Questions = ({handleAnswers, question, measure, inl, progress}) => {
 
   return (
     <div>
+        <div className={styles.progress}>
+          <div 
+            className={styles.progress__completed} 
+            style={{width: `${progress}%`}}
+            ></div>
+        </div>
         <motion.div
             key="measure"
             initial={{opacity: 0.5}} 
@@ -53,12 +59,6 @@ const Questions = ({handleAnswers, question, measure, inl, progress}) => {
                     </label>
                 </div>
             ))}
-        </div>
-        <div className={styles.progress}>
-          <div 
-            className={styles.progress__completed} 
-            style={{backgroundColor: `${measure.background}`, width: `${progress}%`}}
-            ></div>
         </div>
         <button 
             className={styles.question__button} 
