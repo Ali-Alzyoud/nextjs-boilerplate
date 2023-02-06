@@ -1,0 +1,16 @@
+.doctor__details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rating__stars {
+    display: flex;
+    gap: 4px;
+    color: #ffc107;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,6 +1,6 @@
 export const storiesInl = {
-    'en-US': 'Featured Stories',
-    'ar-AR': 'القصص المميزة'
+    'en-US': 'Featured Doctors',
+    'ar-AR': 'الأطباء المميزون'
 }
 
 export const measuresInl = {

@@ -19,7 +19,7 @@ const Gift = ({inl}) => {
             {locale === 'ar-AR'? (
                 <div className={styles.gift__content}>
                     <h2 className={styles.gift__title}>ﻷن سعادتهم مهمة للغاية بالنسبة لك</h2>
-                    <p className={styles.gift__description}>لبيه يتيح لك إهداء رصيد لمن تحب</p>
+                    <p className={styles.gift__description}>كيورا يتيح لك إهداء رصيد لمن تحب</p>
                     <button className={styles.gift__button}>
                         إهداء صديق
                     </button>

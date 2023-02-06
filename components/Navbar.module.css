@@ -3,7 +3,8 @@
     padding-bottom: 16px;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+    margin-bottom: 48px;
 }
 
 .navbar__links {

@@ -2,14 +2,30 @@ import '@/styles/globals.css'
 import '@/styles/normalize.css'
 import '@/styles/slug.css'
 
+import React, {useEffect} from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+
+import Navbar from '@/components/Navbar'
 
 import { AnimatePresence } from 'framer-motion'
 
 
 export default function App({ Component, pageProps }) {
-  const router = useRouter()
+  const inl = useRouter()
+
+
+  useEffect(() => {
+    const flag = inl['locale'] === 'ar-AR'
+    const html = document.querySelector('html')
+    if(flag) {
+      html.setAttribute('dir', 'rtl')
+    } else {
+      html.setAttribute('dir', 'ltr')
+    }
+
+  })
+
   return (
     <>
       <Head>
@@ -19,7 +35,7 @@ export default function App({ Component, pageProps }) {
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        {router.locale === 'ar-AR'? (
+        {inl.locale === 'ar-AR'? (
           <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
         ) : (
           <>
@@ -27,6 +43,14 @@ export default function App({ Component, pageProps }) {
           </>
         )}
       </Head>
+
+        <div className='container'>
+          <header>
+            {/* Navbar */}
+            <Navbar inl={inl} />
+          </header>
+        </div>
+
       <AnimatePresence 
         // mode='wait'
         // initial={false}
@@ -35,7 +59,7 @@ export default function App({ Component, pageProps }) {
         }}
 
       >
-        <Component {...pageProps} key={router.locale} />
+        <Component {...pageProps} key={inl.locale} />
       </AnimatePresence>
     </>
   )

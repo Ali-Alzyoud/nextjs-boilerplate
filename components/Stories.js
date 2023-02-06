@@ -1,13 +1,24 @@
 import React from 'react'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
-import StoriesData from '../data/stories'
 import styles from './Stories.module.css'
 import {storiesInl, moreInl} from '../data/fixedData'
 
-const Stories = ({inl}) => {
+const getProfileImage = (profileImage) => {
+  if(profileImage) {
+    return `https://s3-eu-west-1.amazonaws.com/curaapps/${profileImage}`
+  } else {
+    return 'https://cura.healthcare/Content/img/profileempty.png'
+  }
+}
+
+const Stories = ({inl, doctorsData}) => {
   const {locale} = inl
+  const allDoctors = doctorsData.Doctors
+  const doctors = allDoctors.slice(0, 14)
+  console.log(doctorsData)
   return (
     
       <section className={styles.stories}>
@@ -17,14 +28,17 @@ const Stories = ({inl}) => {
           </header>
 
         <ul className={styles.stories__items}>
-          {StoriesData
-          .filter(story => story.locale === locale)
-          .map(story => (
-            <li className={styles.story} key={story.id}>
-              <div className={`${styles.gradient} ${story.active? styles.active : ''}`}>
-                <Image className={styles.story__image} src={story.image} alt={story.title} width={70} height={70} />
-              </div>
-              <h3 className={styles.story__title}>{story.title}</h3>
+          {doctors.map(doctor => (
+            <li key={doctor.id}>
+              <Link className={styles.story} href={`/doctors/${doctor.UserName}`}>
+                <div className={`${styles.gradient} ${!doctor.active? styles.active : ''}`}>
+                  <Image 
+                    className={styles.story__image} 
+                    src={getProfileImage(doctor.ProfilePicThumbnail)} 
+                    alt={doctor.title} width={70} height={70} />
+                </div>
+                <h3 className={styles.story__title}>{doctor.FirstName} {doctor.LastName}</h3>
+              </Link>
             </li>
           ))}
         </ul>

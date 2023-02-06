@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 
 import styles from '@/styles/Home.module.css'
 
-import Navbar from '@/components/Navbar'
 import Stories from '@/components/Stories'
 import Measures from '@/components/Measures'
 import Measure from '@/components/Measure'
@@ -17,32 +16,34 @@ import Business from '@/components/Business'
 import Gift from '@/components/Gift'
 
 
-export default function Home() {
+export async function getServerSideProps() {
+  const request = await fetch(`https://cura.healthcare/Doctorbrowser/Doctor/GetDoctors?orderby=doctors.AvailabilityId,doctors.rating&orderdir=desc&featured=true&Culture=ar&start_from=0`)
+  const doctorsData = await request.json()
+
+  return {
+      props: {
+          doctorsData,
+      }
+  }
+  
+}
+
+
+export default function Home({doctorsData}) {
   const inl = useRouter()
   const [modal, setModal] = useState(() => ({open: false, opendedMeasure: null}))
 
   const modalHandle = (slug) => {
     const measure = MeasuresData.find(m => m.slug === slug)
     setModal({open: true, opendedMeasure: measure})
-    console.log('modal', modal)
-    console.log('slug', slug)
+    // console.log('modal', modal)
+    // console.log('slug', slug)
   }
 
   const closeModal = () => {
     setModal({open: false, opendedMeasure: null});
 
   }
-
-  useEffect(() => {
-    const flag = inl['locale'] === 'ar-AR'
-    const html = document.querySelector('html')
-    if(flag) {
-      html.setAttribute('dir', 'rtl')
-    } else {
-      html.setAttribute('dir', 'ltr')
-    }
-
-  })
 
   useEffect(() => {
     if(modal.open) {
@@ -61,13 +62,9 @@ export default function Home() {
     > 
 
     <div className={styles.grid}>
-        <header className={styles.header}>
-          {/* Navbar */}
-          <Navbar inl={inl} />
-        </header>
 
         <main className={styles.main}>
-          <Stories inl={inl} />
+          <Stories inl={inl} doctorsData={doctorsData} />
           <Measures inl={inl} modalHandle={modalHandle} />
           <Programs inl={inl} />
         </main>

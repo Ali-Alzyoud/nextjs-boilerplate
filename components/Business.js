@@ -17,12 +17,12 @@ const Business = ({inl}) => {
             </div>
             {locale === 'ar-AR'? (
                 <div className={styles.business__content}>
-                    <h2 className={styles.business__title}>لبيه للأعمال</h2>
+                    <h2 className={styles.business__title}>كيورا للأعمال</h2>
                     <p className={styles.business__description}>حزمة من خدمات الرفاهية النفسية المدعومة للموظفين.</p>
                 </div>
             ) : (
                 <div className={styles.business__content}>
-                    <h2 className={styles.business__title}>Labya for Business</h2>
+                    <h2 className={styles.business__title}>Cura for Business</h2>
                     <p className={styles.business__description}>Lorem Ipsum is simply dummy text of the printing.</p>
                 </div>
             )}

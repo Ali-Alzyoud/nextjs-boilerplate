@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['images.pexels.com']
+    domains: ['images.pexels.com', 's3-eu-west-1.amazonaws.com', 'cura.healthcare']
   },
   i18n: {
     locales: [ 'ar-AR', 'en-US'],
