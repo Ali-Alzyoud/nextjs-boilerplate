@@ -125,3 +125,8 @@ ul {
 .dark .answer--dark:hover {
   background-color: transparent;
 }
+
+.dark .card {
+  background-color: hsl(211, 39%, 23%);
+  border-color: hsl(211, 39%, 23%) !important;
+}
