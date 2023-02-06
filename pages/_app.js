@@ -2,7 +2,7 @@ import '@/styles/globals.css'
 import '@/styles/normalize.css'
 import '@/styles/slug.css'
 
-import React, {useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 
@@ -12,6 +12,7 @@ import { AnimatePresence } from 'framer-motion'
 
 
 export default function App({ Component, pageProps }) {
+  const [darkMode, setDarkMode] = useState(false);
   const inl = useRouter()
 
 
@@ -24,6 +25,15 @@ export default function App({ Component, pageProps }) {
       html.setAttribute('dir', 'ltr')
     }
 
+  })
+
+  useEffect(() => {
+    if(darkMode) {
+      document.body.classList.add('dark')
+    } else {
+      document.body.classList.remove('dark')
+
+    }
   })
 
   return (
@@ -42,12 +52,18 @@ export default function App({ Component, pageProps }) {
           <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet"></link>
           </>
         )}
+
+        {darkMode? (
+          <link rel='stylesheet' href='../styles/darkmode.css' />
+        ) : (
+          ''
+        )}
       </Head>
 
         <div className='container'>
           <header>
             {/* Navbar */}
-            <Navbar inl={inl} />
+            <Navbar inl={inl} darkMode={darkMode} setDarkMode={setDarkMode}  />
           </header>
         </div>
 
