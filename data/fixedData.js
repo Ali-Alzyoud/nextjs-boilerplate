@@ -60,6 +60,6 @@ export const resultMessageInl = {
 }
 
 export const language = {
-    'ar-AR': 'العربية',
-    'en-US': 'English'
+    'ar-AR': 'AR',
+    'en-US': 'EN'
 }

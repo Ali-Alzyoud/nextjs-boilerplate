@@ -33,6 +33,18 @@
     border-radius: 50%;
     background-color: #fff;
     border: 2px solid #fff;
+    position: relative;
+}
+
+.story__image:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-image: url('https://cura.healthcare/Content/img/profileempty.png');
+    border-radius: 50%;
+    border: 2px solid #fff;
 }
 
 .story__title {

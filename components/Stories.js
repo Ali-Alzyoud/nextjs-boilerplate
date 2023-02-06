@@ -35,7 +35,8 @@ const Stories = ({inl, doctorsData}) => {
                   <Image 
                     className={styles.story__image} 
                     src={getProfileImage(doctor.ProfilePicThumbnail)} 
-                    alt={`${doctor.FirstName} ${doctor.LastName}`} width={70} height={70} />
+                    alt={``} width={70} height={70}
+                     />
                 </div>
                 <h3 className={styles.story__title}>{doctor.FirstName} {doctor.LastName}</h3>
               </Link>
