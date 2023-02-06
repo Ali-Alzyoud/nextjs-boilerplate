@@ -18,7 +18,7 @@ const Stories = ({inl, doctorsData}) => {
   const {locale} = inl
   const allDoctors = doctorsData.Doctors
   const doctors = allDoctors.slice(0, 14)
-  console.log(doctorsData)
+
   return (
     
       <section className={styles.stories}>
@@ -29,13 +29,13 @@ const Stories = ({inl, doctorsData}) => {
 
         <ul className={styles.stories__items}>
           {doctors.map(doctor => (
-            <li key={doctor.id}>
+            <li key={doctor.Id}>
               <Link className={styles.story} href={`/doctors/${doctor.UserName}`}>
                 <div className={`${styles.gradient} ${!doctor.active? styles.active : ''}`}>
                   <Image 
                     className={styles.story__image} 
                     src={getProfileImage(doctor.ProfilePicThumbnail)} 
-                    alt={doctor.title} width={70} height={70} />
+                    alt={`${doctor.FirstName} ${doctor.LastName}`} width={70} height={70} />
                 </div>
                 <h3 className={styles.story__title}>{doctor.FirstName} {doctor.LastName}</h3>
               </Link>

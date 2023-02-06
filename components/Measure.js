@@ -18,6 +18,8 @@ function Meausre({measure, closeModal, inl}) {
     questions = questions.filter(question => question.locale === locale);
     const question = questions[currentQuestion];
 
+    const progress = (100/questions.length) * currentQuestion
+
     const handleAnswers = (e, selectedAnswer) => {
         e.preventDefault()
         if(question && selectedAnswer && currentQuestion < questions.length - 1) {
@@ -69,7 +71,7 @@ function Meausre({measure, closeModal, inl}) {
                                 </button>
                             </div>
                             ) : !showingResult? (
-                                <Questions inl={inl} handleAnswers={handleAnswers} question={question} measure={measure} />
+                                <Questions inl={inl} handleAnswers={handleAnswers} question={question} measure={measure} progress={progress} />
                             ): (
                                 <div className={styles.result}>
                                     <h2 className={styles.result__title}>{resultTitleInl[locale]}</h2>
@@ -86,8 +88,6 @@ function Meausre({measure, closeModal, inl}) {
                 </svg>
             </button>
         </>
-
-
     )
 }
 

@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 
 import styles from './Questions.module.css'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
-const Questions = ({handleAnswers, question, measure, inl}) => {
+const Questions = ({handleAnswers, question, measure, inl, progress}) => {
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const {locale} = inl
 
@@ -54,6 +54,12 @@ const Questions = ({handleAnswers, question, measure, inl}) => {
                 </div>
             ))}
         </div>
+        <div className={styles.progress}>
+          <div 
+            className={styles.progress__completed} 
+            style={{backgroundColor: `${measure.background}`, width: `${progress}%`}}
+            ></div>
+        </div>
         <button 
             className={styles.question__button} 
             style={{backgroundColor: `${measure.background}`}}
@@ -61,6 +67,7 @@ const Questions = ({handleAnswers, question, measure, inl}) => {
             >
                 التالي
         </button>
+
       </form>
       </motion.div>
     </div>
