@@ -44,7 +44,7 @@ function Meausre({measure, closeModal, inl}) {
                         transition={{duration: 0.3}}
                         exit={{opacity: 0.5, scale: 0.5}}
                     > 
-                        <section className={styles.measure}>
+                        <section className={`${styles.measure} measure--dark`}>
                             <header className={styles.measure__header}>
                                 <button className={styles.closeButton} onClick={() => closeModal()}>
                                     <svg id="i-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="18" height="18" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">

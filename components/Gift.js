@@ -7,7 +7,7 @@ const Gift = ({inl}) => {
 
   return (
     <div>
-        <article className={styles.gift}>
+        <article className={`${styles.gift} gift--dark`}>
             <div className={styles.gift__overlay}>
                 <div className={styles.gift__icon}>
                     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +28,7 @@ const Gift = ({inl}) => {
                 <div className={styles.gift__content}>
                     <h2 className={styles.gift__title}>Give your friend a gift</h2>
                     <p className={styles.gift__description}>People Love Gifts for sure</p>
-                    <button className={styles.gift__button}>
+                    <button className={`${styles.gift__button} gift__button--dark`}>
                         Friend Gift
                     </button>
                 </div>

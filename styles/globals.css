@@ -80,12 +80,35 @@ ul {
   color: hsl(210, 36%, 96%);
 }
 
-.story__image--dark {
+.dark .story__image--dark {
   border-color: hsl(211, 39%, 23%) !important;
   background-color: hsl(211, 39%, 23%) !important;
 }
 
-.feeling__emogi--dark {
+.dark .feeling__emogi--dark {
   background-color: hsl(209, 34%, 30%) !important;
 }
 
+.dark .business__title--dark {
+  color: hsl(209, 61%, 16%) !important;
+}
+
+.dark .business__icon--dark {
+  color: #FFF !important;
+  background-color: hsl(209, 61%, 16%) !important;
+}
+
+.dark .gift--dark {
+  background-color: hsl(209, 34%, 30%) !important;
+}
+
+.dark .gift__button--dark {
+  background-color: hsl(212, 33%, 89%) !important;
+  border-color: hsl(209, 61%, 16%);
+}
+
+.dark .measure--dark h2, 
+.dark .measure--dark p,
+.dark label {
+  color: hsl(209, 61%, 16%);
+}
