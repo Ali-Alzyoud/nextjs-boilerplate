@@ -10,7 +10,7 @@ import moment from 'moment'
 export async function getServerSideProps({params}) {
     const {slug} = params
     
-    const request = await fetch(`https://api.cura.healthcare/DoctorProfileAnonymous?Username=${slug}`)
+    const request = await fetch(`https://api-dev-1.cura.healthcare/DoctorProfileAnonymous?Username=${slug}`)
     const result = await request.json()
 
     return {
@@ -34,13 +34,15 @@ const Doctor = ({result}) => {
 
     sections  = sections.filter(section => section.Type !== 'Recommendations' && section.Type !== 'MyServices')
     .filter(section => section.data.length !== 0)
-    .filter(section => section.data[0].Title)
+    .filter(section => section.data[0].Title || section.data[0].MediaItemS3Key)
 
     const handleMoreRating = (e) => {
         if(moreRating < allRating.length) {
             setMoreRating(prev => prev + 10)
         }
     }
+
+    console.log(sections)
 
     return (
         <>
@@ -110,10 +112,16 @@ const Doctor = ({result}) => {
                                         <h4 className="card-title mb-3">{info[section.Type]}</h4>
                                         <ul>
                                             {section.data.map(data => (
-                                                <li className="card-text">
+                                                <li className="card-text" key={data.Id}>
+                                                    {data.Title? (
                                                     <h6>
-                                                    {data.Title}
+                                                        {data.Title}
                                                     </h6>
+                                                    ) : (
+                                                        <video className='w-100' controls>
+                                                            <source src={`https://s3-eu-west-1.amazonaws.com/curaapps/${data.MediaItemS3Key}`} type="video/webm"></source>
+                                                        </video>
+                                                    )}
                                                 </li>
                                             ))}
                                         </ul>
@@ -146,8 +154,10 @@ const Doctor = ({result}) => {
 
                         </div>
                         <button 
-                            className='btn btn-primary d-block w-100 btn-lg mt-5' 
-                            onClick={handleMoreRating}>عرض المزيد</button>
+                            className={`btn btn-primary d-block w-100 btn-lg mt-5 ${(moreRating >= allRating.length)? 'd-none' : ''}`} 
+                            onClick={handleMoreRating}
+                            disabled={(moreRating >= allRating.length)? true : false}
+                            >عرض المزيد</button>
                     </section>
                     
                 </div>
